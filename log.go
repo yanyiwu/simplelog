@@ -9,18 +9,18 @@ import (
 
 const (
     // [log_level] [time] [filename]:[line] [message]
-    LOG_FORMAT = "%s %s %s:%d %s\n"
+    FORMAT = "%s %s %s:%d %s\n"
 )
 
 const (
-    LOG_LEVEL_DEBUG = iota
-    LOG_LEVEL_INFO
-    LOG_LEVEL_WARN
-    LOG_LEVEL_ERROR
-    LOG_LEVEL_FATAL
+    LEVEL_DEBUG = iota
+    LEVEL_INFO
+    LEVEL_WARN
+    LEVEL_ERROR
+    LEVEL_FATAL
 )
 
-var LOG_LEVEL_STRINGS = [...]string {
+var LEVEL_STRINGS = [...]string {
     "DEBUG",
     "INFO",
     "WARN",
@@ -28,31 +28,31 @@ var LOG_LEVEL_STRINGS = [...]string {
     "FATAL",
 }
 
-var log_level = LOG_LEVEL_DEBUG
+var log_level = LEVEL_DEBUG
 
-func SetLogLevel(level int) {
+func SetLevel(level int) {
     log_level = level
 }
 
 
-func LogDebug(format string, v ...interface{}) {
-    logByLevel(LOG_LEVEL_DEBUG, fmt.Sprintf(format, v ...))
+func Debug(format string, v ...interface{}) {
+    logByLevel(LEVEL_DEBUG, fmt.Sprintf(format, v ...))
 }
 
-func LogInfo(format string, v ...interface{}) {
-    logByLevel(LOG_LEVEL_INFO, fmt.Sprintf(format, v ...))
+func Info(format string, v ...interface{}) {
+    logByLevel(LEVEL_INFO, fmt.Sprintf(format, v ...))
 }
 
-func LogWarn(format string, v ...interface{}) {
-    logByLevel(LOG_LEVEL_WARN, fmt.Sprintf(format, v ...))
+func Warn(format string, v ...interface{}) {
+    logByLevel(LEVEL_WARN, fmt.Sprintf(format, v ...))
 }
 
-func LogError(format string, v ...interface{}) {
-    logByLevel(LOG_LEVEL_ERROR, fmt.Sprintf(format, v ...))
+func Error(format string, v ...interface{}) {
+    logByLevel(LEVEL_ERROR, fmt.Sprintf(format, v ...))
 }
 
-func LogFatal(format string, v ...interface{}) {
-    logByLevel(LOG_LEVEL_FATAL, fmt.Sprintf(format, v ...))
+func Fatal(format string, v ...interface{}) {
+    logByLevel(LEVEL_FATAL, fmt.Sprintf(format, v ...))
 }
 
 func logByLevel(level int, message string) {
@@ -62,5 +62,5 @@ func logByLevel(level int, message string) {
     time_str := fmt.Sprintf("%s", time.Now())[:19]
     _, filename, line, _ := runtime.Caller(2)
     _, filename = path.Split(filename)
-    fmt.Printf(LOG_FORMAT, LOG_LEVEL_STRINGS[level], time_str, filename, line, message)
+    fmt.Printf(FORMAT, LEVEL_STRINGS[level], time_str, filename, line, message)
 }

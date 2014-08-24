@@ -17,17 +17,17 @@ import (
 )
 
 func main() {
-    log.LogDebug("hello simplelog.");
-    log.LogInfo("hello simplelog.");
-    log.LogWarn("hello simplelog.");
-    log.LogError("hello simplelog.");
-    log.LogFatal("hello simplelog.");
-    log.SetLogLevel(log.LOG_LEVEL_FATAL)
-    log.LogDebug("hello simplelog.");
-    log.LogInfo("hello simplelog.");
-    log.LogWarn("hello simplelog.");
-    log.LogError("hello simplelog.");
-    log.LogFatal("hello simplelog.");
+    log.Debug("hello simplelog.");
+    log.Info("hello simplelog.");
+    log.Warn("hello simplelog.");
+    log.Error("hello simplelog.");
+    log.Fatal("hello simplelog.");
+    log.SetLevel(log.LEVEL_FATAL)
+    log.Debug("hello simplelog.");
+    log.Info("hello simplelog.");
+    log.Warn("hello simplelog.");
+    log.Error("hello simplelog.");
+    log.Fatal("hello simplelog.");
 }
 ```
 
