@@ -1,4 +1,4 @@
-# simple log
+# simplelog [![Build Status](https://travis-ci.org/aszxqw/simplelog.svg?branch=master)](https://travis-ci.org/aszxqw/simplelog)
 
 i can not find any simple log module which i wanna use .  
 all the log modules which i found is not easy enough to use.  
@@ -40,7 +40,7 @@ FATAL 2014-08-24 14:22:25 test.go:12 hello simplelog.
 FATAL 2014-08-24 14:22:25 test.go:18 hello simplelog.
 ```
 
-see details in `log_test.log`
+see details in `log_test.go`
 
 ## contact
 
