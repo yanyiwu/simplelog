@@ -1,9 +1,12 @@
-# simplelog [![Build Status](https://travis-ci.org/aszxqw/simplelog.svg?branch=master)](https://travis-ci.org/aszxqw/simplelog)
+# simplelog 
 
-i can not find any simple log module which i wanna use .  
-all the log modules which i found is not easy enough to use.  
-what i want is a log module like python's logging.  
-i feel so disappointed that i make this project for **myself**.  
+[![Build Status](https://travis-ci.org/aszxqw/simplelog.svg?branch=master)](https://travis-ci.org/aszxqw/simplelog)
+[![GoDoc](https://godoc.org/github.com/aszxqw/simplelog?status.svg)](https://godoc.org/github.com/aszxqw/simplelog)
+
+I can not find any simple log module which I wanna use .  
+All the log modules which I found is not easy enough to use.  
+What I want is a log module like python's logging.  
+I feel so disappointed that I make this project for **myself**.  
 
 ## usage
 

@@ -1,3 +1,4 @@
+//See https://github.com/aszxqw/simplelog/blob/master/README.md
 package simplelog
 
 import (
@@ -7,11 +8,10 @@ import (
     "path"
 )
 
-const (
-    // [log_level] [time] [filename]:[line] [message]
-    FORMAT = "%s %s %s:%d %s\n"
-)
+// Log Format : [log_level] [time] [filename]:[line] [message]
+const FORMAT = "%s %s %s:%d %s\n"
 
+// Log Level: DEBUG INFO WARN ERROR FATAL
 const (
     LEVEL_DEBUG = iota
     LEVEL_INFO
@@ -30,6 +30,7 @@ var LEVEL_STRINGS = [...]string {
 
 var log_level = LEVEL_DEBUG
 
+// If SetLevel is not called , log_level is the default value : LEVEL_DEBUG (the lowest level)
 func SetLevel(level int) {
     log_level = level
 }
