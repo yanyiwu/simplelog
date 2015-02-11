@@ -1,7 +1,7 @@
 # simplelog 
 
-[![Build Status](https://travis-ci.org/aszxqw/simplelog.svg?branch=master)](https://travis-ci.org/aszxqw/simplelog)
-[![GoDoc](https://godoc.org/github.com/aszxqw/simplelog?status.svg)](https://godoc.org/github.com/aszxqw/simplelog)
+[![Build Status](https://travis-ci.org/yanyiwu/simplelog.svg?branch=master)](https://travis-ci.org/yanyiwu/simplelog)
+[![GoDoc](https://godoc.org/github.com/yanyiwu/simplelog?status.svg)](https://godoc.org/github.com/yanyiwu/simplelog)
 
 I can not find any simple log module which I wanna use .  
 All the log modules which I found is not easy enough to use.  
@@ -16,7 +16,7 @@ I feel so disappointed that I make this project for **myself**.
 package main
 
 import (
-    log "github.com/aszxqw/simplelog"
+    log "github.com/yanyiwu/simplelog"
 )
 
 func main() {
